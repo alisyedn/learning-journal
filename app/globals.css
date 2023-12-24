@@ -14,3 +14,32 @@ html {
 body {
   background: radial-gradient(#282c34, #282c34);
 }
+
+.not-found,
+.error {
+  width: 100vw;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-found h1,
+.error h1 {
+  font-size: 5rem;
+  color: #262626;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #5f3dc4, #862e9c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.not-found p,
+.error p {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #ced4da;
+}

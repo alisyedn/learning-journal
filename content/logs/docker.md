@@ -1,5 +1,5 @@
 ---
-title: 'Notes about Docker and K8s'
+title: 'Notes about Docker'
 date: '2023-12-22'
 image: docker.png
 excerpt: Docker is an ecosystem projects, tools and utilities.

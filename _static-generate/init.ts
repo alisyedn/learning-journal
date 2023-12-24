@@ -1,16 +1,18 @@
 import {loadAllLogs} from "@/_static-generate/logs-util";
+import {logger} from "@/_static-generate/logger";
+import {saveAll} from "@/_static-generate/sqlite/log-dao";
 
 async function main() {
-  console.log('Running ...')
-  console.log(loadAllLogs());
+  const logFiles = loadAllLogs();
+  saveAll(logFiles)
 }
 
 
 main()
 .then(async () => {
-  console.log(`Finished Building 'build-time' database`)
+  logger.info(`Finished Building 'build-time' database`)
 })
 .catch(async (e) => {
-  console.error(e)
+  logger.error(e)
   process.exit(1)
 })

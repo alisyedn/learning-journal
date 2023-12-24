@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    gap: 2rem;
+    /* center the logo */
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: contain;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}

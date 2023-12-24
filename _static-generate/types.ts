@@ -1,6 +1,7 @@
 
 export type RelativeImage = string
 export type ListOfLogs = LogFile[]
+export type Tags = string []
 
 export interface File {
   [keys: string]: any
@@ -13,7 +14,7 @@ export interface LogFile extends File {
   date: string
   image: string
   excerpt: string
-  tags: string[],
+  tags: Tags,
   isFeatured: boolean
   content: string
 }

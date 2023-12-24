@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next _static-generate",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:db": "npx ts-node _static-generate/init.ts"
+    "build:db": "npx ts-node -r dotenv/config _static-generate/init.ts"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -15,14 +15,18 @@
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "better-sqlite3": "^9.2.2",
+    "dotenv": "^16.3.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "gray-matter": "^4.0.3",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "winston": "^3.11.0"
   }
 }
