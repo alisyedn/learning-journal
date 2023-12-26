@@ -1,12 +1,5 @@
-import {Prisma} from "@prisma/client";
+import {NoteEntity} from "@/libs/dao/db/type";
 
-const NoteWithTag = Prisma.validator<Prisma.LogsDefaultArgs>()({
-  include: {
-    tags: true
-  }
-})
+type Note = NoteEntity & { content: string }
 
-export type Note = Prisma.LogsGetPayload<typeof NoteWithTag>
-
-export type Notes = Note[]
-
+export type {Note}

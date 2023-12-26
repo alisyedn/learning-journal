@@ -1,10 +1,11 @@
-import {loadAllLogs} from "@/_site-seed/logs-util";
+import {loadAllLogs} from "@/libs/dao/fs/journals";
 import {logger} from "@/_site-seed/logger";
-import {saveAll} from "@/_site-seed/sqlite/log-dao";
+import {removeAll, saveAll} from "@/_site-seed/prisma/log-doa";
 
 async function main() {
   const logFiles = loadAllLogs();
-  saveAll(logFiles)
+  await removeAll()
+  await saveAll(logFiles)
 }
 
 

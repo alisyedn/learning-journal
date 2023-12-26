@@ -1,4 +1,4 @@
-import {getNote} from "@/libs/dao/note";
+import {getJournal} from "@/libs/service";
 import {notFound} from "next/navigation";
 import Image from "next/image";
 import Content from "@/components/ui/content";
@@ -6,12 +6,7 @@ import MarkDown from "@/components/notes/mark-down";
 
 const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) => {
 
-  const note = await getNote(slug)
-
-  //TODO::move to service layer!
-  if (!note) {
-    notFound()
-  }
+  const note = await getJournal(slug)
 
   return (
     <Content>

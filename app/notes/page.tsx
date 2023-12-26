@@ -1,9 +1,9 @@
-import {getAllNotes} from "@/libs/dao/note";
+import {getAllJournals} from "@/libs/dao/db/note";
 import NotesList from "@/components/notes/notes-list";
 
 const AllNotesPage = async () => {
 
-  const notes = await getAllNotes()
+  const notes = await getAllJournals()
 
   return (
     <main>

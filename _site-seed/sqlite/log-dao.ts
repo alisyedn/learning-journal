@@ -1,5 +1,5 @@
 import {RunResult} from 'better-sqlite3';
-import {ListOfLogs, LogFile, Tags} from "@/_site-seed/types";
+import {ListOfLogs, LogFile, Tags} from "@/libs/dao/fs/types";
 import {logger} from "@/_site-seed/logger";
 import {SqliteLogFile, SqliteTag} from "@/_site-seed/sqlite/types";
 import {DB, INSERT_LOGS, INSERT_TAGS} from "@/_site-seed/sqlite/DB";

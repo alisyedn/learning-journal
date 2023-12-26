@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from "path"
 import matter from 'gray-matter'
-import {ListOfLogs, LogFile} from "@/_site-seed/types";
+import {ListOfLogs, LogFile} from "@/libs/dao/fs/types";
 
 const LOGS_LOCATION = path.join(process.cwd(), 'content', 'logs')
 
@@ -11,7 +11,7 @@ export function loadAllLogs(): ListOfLogs {
   .map(fileName => getLog(fileName))
 }
 
-function getLog(fileName: string): LogFile {
+export function getLog(fileName: string): LogFile {
   const fileContent = fs.readFileSync(path.join(LOGS_LOCATION, fileName), 'utf-8')
   const { data, content } = matter(fileContent)
   const slug = fileName.replace(/\.md$/, '')
