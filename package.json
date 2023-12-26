@@ -7,23 +7,32 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:db": "npx ts-node -r dotenv/config _static-generate/init.ts"
+    "build:db": "npx ts-node -r dotenv/config _site-seed/init.ts",
+    "prisma:db:seed": "npx prisma db seed",
+    "prisma:generate": "npx prisma generate",
+    "prisma:studio": "npx prisma studio",
+    "prisma:playground": "npx ts-node prisma/playground.ts"
   },
   "dependencies": {
+    "@prisma/client": "^5.7.1",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.8",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.11",
     "better-sqlite3": "^9.2.2",
     "dotenv": "^16.3.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
     "gray-matter": "^4.0.3",
+    "prisma": "^5.7.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5",

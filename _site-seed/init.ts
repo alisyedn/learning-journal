@@ -1,6 +1,6 @@
-import {loadAllLogs} from "@/_static-generate/logs-util";
-import {logger} from "@/_static-generate/logger";
-import {saveAll} from "@/_static-generate/sqlite/log-dao";
+import {loadAllLogs} from "@/_site-seed/logs-util";
+import {logger} from "@/_site-seed/logger";
+import {saveAll} from "@/_site-seed/sqlite/log-dao";
 
 async function main() {
   const logFiles = loadAllLogs();

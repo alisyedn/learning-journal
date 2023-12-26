@@ -1,8 +1,8 @@
 import {RunResult} from 'better-sqlite3';
-import {ListOfLogs, LogFile, Tags} from "@/_static-generate/types";
-import {logger} from "@/_static-generate/logger";
-import {SqliteLogFile, SqliteTag} from "@/_static-generate/sqlite/types";
-import {DB, INSERT_LOGS, INSERT_TAGS} from "@/_static-generate/sqlite/DB";
+import {ListOfLogs, LogFile, Tags} from "@/_site-seed/types";
+import {logger} from "@/_site-seed/logger";
+import {SqliteLogFile, SqliteTag} from "@/_site-seed/sqlite/types";
+import {DB, INSERT_LOGS, INSERT_TAGS} from "@/_site-seed/sqlite/DB";
 
 const saveAll = (listOfLogs: ListOfLogs) => {
   listOfLogs.forEach(save)

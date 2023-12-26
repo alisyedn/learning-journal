@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from "path"
 import matter from 'gray-matter'
-import {ListOfLogs, LogFile} from "@/_static-generate/types";
+import {ListOfLogs, LogFile} from "@/_site-seed/types";
 
 const LOGS_LOCATION = path.join(process.cwd(), 'content', 'logs')
 

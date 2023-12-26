@@ -40,10 +40,10 @@ tags: ['docker', 'advanced']
 docker run ...
 ````
 - Docker Run command will pull the image to the image cache if not local matching image is found in the image cache. 
-    ○ Docker Run basically get you the file system snapshot. 
+  - Docker Run basically get you the file system snapshot. 
 - After the container is created the start-up/boot command will execute to start-up the service within the container, the command can be pretty much anything include cmd commands - theses programs must exist. 
 - One variation of the Run command is to override the default boot command for the container
-    ○ Docker Run <image-name> <override-command> 
+  - `docker Run <image-name> <override-command>` 
 - This command effectivity runs two commands under the hood, docker create and docker start   
 - If Run command with -d it will default all output to the terminal.  
 - By default the application running in the container will not be updated if we make changes locally to the application files, however, this can be enabled. 
@@ -64,11 +64,11 @@ docker create ..
 - Docker create <image name>, this will return the container id.  
 - After the image we can set the override command: `docker create <image name> [override command]`
 
-```` dockerfile
+````dockerfile
 docker start ..
 ````
-```` dockerfile
-- Docker start -a <container id 1>  <container id 2> …..
+````dockerfile
+docker start -a <container id 1>  <container id 2> ...
 ```` 
 - The `-a` is optional, it instructs docker to watch for output and print it to the current terminal - unlike docker start which will watch for output and print it to the current terminal. 
 - The start command can be used to start several containers at the same time.  

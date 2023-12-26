@@ -6,6 +6,18 @@
     margin-top: 2rem;
 }
 
+.title {
+    position: relative;
+}
+
+.title-link {
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 .nav ul {
     display: flex;
     gap: 1.5rem;
@@ -17,15 +29,10 @@
 
 .logo {
     display: flex;
+    /*TODO::improve this to remove un-clickable dead-zone*/
     gap: 2rem;
-    /* center the logo */
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: bold;
 }
 
 .logo img {
