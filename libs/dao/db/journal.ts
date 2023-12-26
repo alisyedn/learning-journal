@@ -1,5 +1,5 @@
 import db from "@/prisma/db";
-import {NoteEntity, NoteEntities} from "@/libs/dao/db/type";
+import {NoteEntities, NoteEntity} from "@/libs/dao/db/type";
 
 const getAllJournals = async (): Promise<NoteEntities> => {
   return db.logs.findMany({
@@ -20,4 +20,15 @@ const getJournal = async (slug: string) : Promise<NoteEntity | null> => {
   })
 }
 
-export {getAllJournals, getJournal}
+const getFeaturedJournals = async (): Promise<NoteEntities> => {
+  return db.logs.findMany({
+    include: {
+      tags: true
+    },
+    where: {
+      isFeatured: true
+    }
+  })
+}
+
+export {getAllJournals, getJournal, getFeaturedJournals}

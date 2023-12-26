@@ -1,2 +1,2 @@
-export * from './note'
+export * from './journal'
 export * from './type'
