@@ -28,8 +28,19 @@ prisma.$on('query', (e: any) => {
 })
 
 async function main() {
-  const logs = await prisma.logs.findMany()
-  console.log(logs)
+  const logs1 = await prisma.logs.findMany({
+    include: {
+      tags: true
+    },
+    where: {
+      tags: {
+        some : {
+          OR: []
+        }
+      }
+    }
+  })
+  console.log(logs1)
 }
 
 main()
