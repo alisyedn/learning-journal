@@ -10,5 +10,11 @@ type NoteEntity = Prisma.LogsGetPayload<typeof NoteEntityWithTag>
 
 type NoteEntities = NoteEntity[]
 
-export type {NoteEntity, NoteEntities}
+const Tag = Prisma.validator<Prisma.TagsDefaultArgs>()({})
+
+type TagEntity = Prisma.TagsGetPayload<typeof Tag>
+
+type TagEntities = TagEntity[]
+
+export type {NoteEntity, NoteEntities, TagEntity, TagEntities}
 

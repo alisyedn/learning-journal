@@ -1,5 +1,6 @@
 import {getAllJournals} from "@/libs/dao/db/journal";
-import NotesList from "@/components/notes/notes-list";
+import Content from "@/components/ui/content";
+import JournalList from "@/components/notes/journal-list";
 
 const AllNotesPage = async () => {
 
@@ -7,8 +8,10 @@ const AllNotesPage = async () => {
 
   return (
     <main>
-      <h1>All Notes!</h1>
-      <NotesList notes={notes}/>
+      <Content>
+        <h1>All Notes!</h1>
+      </Content>
+      <JournalList notes={notes}/>
     </main>
   )
 }

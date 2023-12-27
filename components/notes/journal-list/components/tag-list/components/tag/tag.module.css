@@ -1,0 +1,14 @@
+.tag {
+    font-size: 0.8rem;
+    background-color: #000000;
+    padding: 4px 0.5rem;
+    border-radius: 4px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.tag:hover,
+.tag:active {
+    background-color: #1c7ed6;
+    box-shadow: 0 0 6px rgb(0, 0, 0);
+}

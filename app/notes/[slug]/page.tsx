@@ -1,5 +1,4 @@
 import {getJournal} from "@/libs/service";
-import {notFound} from "next/navigation";
 import Image from "next/image";
 import Content from "@/components/ui/content";
 import MarkDown from "@/components/notes/mark-down";
