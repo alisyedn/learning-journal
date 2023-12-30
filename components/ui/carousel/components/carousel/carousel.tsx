@@ -10,7 +10,7 @@ import ActionNext from "@/components/ui/carousel/components/action-next";
 import ActionBack from "@/components/ui/carousel/components/action-back";
 import Link from "next/link";
 
-const Carousel = ({ styles, ms }: CarouselProps) => {
+const Carousel = ({ className, ms }: CarouselProps) => {
 
   const {journals, index, next} = useCarouselContext()
   const { slug, image, title } = journals[index]
@@ -24,7 +24,7 @@ const Carousel = ({ styles, ms }: CarouselProps) => {
   }, [ms, next]);
 
   return (
-    <aside className={classes.carousel} style={styles}>
+    <aside className={`${classes.carousel} ${className}`}>
       <div className={classes.image}>
         <Link href={`/notes/${slug}`}>
           <Image src={`/images/logs/${slug}/${image}`} alt={title} fill/>

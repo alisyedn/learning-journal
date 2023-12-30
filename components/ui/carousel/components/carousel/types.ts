@@ -1,6 +1,5 @@
-import {Styles} from "@/components/ui/carousel/types";
 
 export interface CarouselProps {
-  styles: Styles
+  className: string
   ms: number
 }
