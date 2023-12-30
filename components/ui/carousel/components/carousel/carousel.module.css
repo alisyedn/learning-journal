@@ -1,0 +1,21 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    box-shadow: 0 0 24px #000000;
+}
+
+.image {
+    /* just take 100% of outer parent*/
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.image img {
+    object-fit: cover;
+}

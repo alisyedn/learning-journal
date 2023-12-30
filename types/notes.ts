@@ -1,5 +1,7 @@
-import {NoteEntity} from "@/libs/dao/db/type";
+import {NoteEntities, NoteEntity} from "@/libs/dao/db/type";
 
 type Note = NoteEntity & { content: string }
 
-export type {Note}
+type Notes = NoteEntities
+
+export type {Note, Notes}

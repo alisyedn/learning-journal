@@ -1,0 +1,12 @@
+.dot {
+    border-radius: 50%;
+    background-color: #e7f5ff;
+    padding: 6px;
+    border: 2px solid #1864ab;
+    cursor: pointer;
+}
+
+.dot.selected {
+    background-color: #339af0;
+    border: 2px solid #339af0;
+}
