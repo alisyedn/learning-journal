@@ -9,7 +9,7 @@ const FeaturedJournal = async () => {
     <>
       <header className={classes.header}>
         <h1>Featured Journals</h1>
-        <p>Set of Journals that a more interesting then the reset!</p>
+        <p>Set of Journals that are more interesting then the reset!</p>
       </header>
       <main className={classes.main}>
         <JournalList notes={featuredJournals}/>
