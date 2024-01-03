@@ -7,12 +7,18 @@ const LOGS_LOCATION = path.join(process.cwd(), 'content', 'logs')
 
 export function loadAllLogs(): ListOfLogs {
   const fileNames = fs.readdirSync(LOGS_LOCATION);
-  return fileNames
-  .map(fileName => getLog(fileName))
+  return fileNames.map(fileName => getLog(fileName)!)
 }
 
-export function getLog(fileName: string): LogFile {
-  const fileContent = fs.readFileSync(path.join(LOGS_LOCATION, fileName), 'utf-8')
+export function getLog(fileName: string): LogFile | null{
+
+  const fileLocation = path.join(LOGS_LOCATION, fileName);
+
+  if(!fs.existsSync(fileLocation)){
+    return null
+  }
+
+  const fileContent = fs.readFileSync(fileLocation, 'utf-8')
   const { data, content } = matter(fileContent)
   const slug = fileName.replace(/\.md$/, '')
 

@@ -1,0 +1,41 @@
+.header {
+    width: 70vw;
+    margin: 10rem auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: var(--main-heading-font-size);
+    background: var(--main-heading-background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header p {
+    font-size: 1.5rem;
+}
+
+.image {
+    height: 20rem;
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.image img {
+    object-fit: cover;
+}
+
+.content {
+    max-width: 70rem;
+    margin: 5rem auto;
+}

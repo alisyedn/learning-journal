@@ -3,7 +3,7 @@ import classes from "./mark-down.module.css";
 import ReactMarkdown, {Components} from "react-markdown";
 import Code from "@/components/notes/mark-down/components/code";
 
-const MarkDown = ({ content }: MarkDownProps) => {
+const MarkDown = ({ content, className }: MarkDownProps) => {
 
   const components: Components = {
     code(code) {
@@ -12,7 +12,7 @@ const MarkDown = ({ content }: MarkDownProps) => {
   }
 
   return (
-    <article className={classes.content}>
+    <article className={`${classes.content} ${className ?? ''}`}>
       <ReactMarkdown components={components}>
         {content}
       </ReactMarkdown>

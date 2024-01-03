@@ -1,6 +1,6 @@
 import {NoteEntities, NoteEntity} from "@/libs/dao/db/type";
 
-type Note = NoteEntity & { content: string }
+type Note = NoteEntity
 
 type Notes = NoteEntities
 

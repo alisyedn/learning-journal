@@ -1,5 +1,5 @@
 import {getAllJournalsWithAtLeastOneTag as getJournalByTags, getJournal as getJournalBySlug} from "@/libs/dao/db";
-import {getLog as getContentBySlug} from '@/libs/dao/fs/journals'
+import {getLog as getContentBySlug} from '@/libs/dao/fs'
 import {Note} from "@/types";
 import {notFound} from "next/navigation";
 
@@ -9,16 +9,20 @@ const getJournal = async (slug: string): Promise<Note> => {
   if (!journal) {
     notFound()
   }
-  const { content } = getContentBySlug(`${slug}.md`)
+  return journal
+}
 
-  return {
-    ...journal,
-    content
+const getJournalContent = async (slug: string) => {
+  const logFile = getContentBySlug(`${slug}.md`)
+
+  if (!logFile) {
+    notFound()
   }
+  return logFile.content
 }
 
 const getFilteredJournals = async (tags: string[]) => {
   return await getJournalByTags(tags)
 }
 
-export {getJournal, getFilteredJournals}
+export {getJournal, getFilteredJournals, getJournalContent}
