@@ -4,10 +4,11 @@ import {Suspense} from "react";
 import {JournalMarkDown} from "@/components/notes/journal-mark-down";
 import classes from './page.module.css'
 import JournalContentLoading from "@/components/notes/journal-content-loading";
+import TagList from "@/components/ui/tag-list";
 
 const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) => {
 
-  const { title, excerpt, image } = await getJournalBySlug(slug)
+  const { title, excerpt, image, tags } = await getJournalBySlug(slug)
 
   return (
     <>
@@ -19,6 +20,7 @@ const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) =>
                  alt={title}
                  fill
           />
+          <TagList tags={tags} className={classes.tags}/>
         </div>
       </header>
       <main className={classes.content}>

@@ -1,4 +1,4 @@
-import {TagProps} from "@/components/notes/journal-list/components/tag-list/components/tag/types";
+import {TagProps} from "@/components/ui/tag-list/components/tag/types";
 import classes from './tag.module.css'
 import Link from "next/link";
 

@@ -9,11 +9,12 @@ import Slider from "@/components/ui/carousel/components/slider";
 import ActionNext from "@/components/ui/carousel/components/action-next";
 import ActionBack from "@/components/ui/carousel/components/action-back";
 import Link from "next/link";
+import TagList from "@/components/ui/tag-list";
 
 const Carousel = ({ className, ms }: CarouselProps) => {
 
   const {journals, index, next} = useCarouselContext()
-  const { slug, image, title } = journals[index]
+  const { slug, image, title, tags } = journals[index]
 
   useEffect(() => {
     const timeout = setTimeout(next, ms)
@@ -31,6 +32,7 @@ const Carousel = ({ className, ms }: CarouselProps) => {
         </Link>
         <ActionNext/>
         <ActionBack/>
+        <TagList tags={tags} className={classes.tags}/>
       </div>
       <Slider/>
     </aside>

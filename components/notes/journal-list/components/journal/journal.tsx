@@ -2,7 +2,7 @@ import {JournalProps} from "@/components/notes/journal-list/components/journal/t
 import Link from "next/link";
 import classes from './journal.module.css'
 import Image from "next/image";
-import TagList from "../tag-list";
+import TagList from "@/components/ui/tag-list";
 
 const Journal = ({ journal }: JournalProps) => {
   return (

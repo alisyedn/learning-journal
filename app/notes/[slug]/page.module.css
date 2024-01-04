@@ -39,3 +39,10 @@
     max-width: 70rem;
     margin: 5rem auto;
 }
+
+.tags {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    transform: translateY(50%)
+}
