@@ -17,7 +17,7 @@ const Journal = ({ journal }: JournalProps) => {
           </div>
           <div className={classes['header-text']}>
             <div className={classes['header-tags']}>
-              <TagList tags={journal.tags} isFeatured={journal.isFeatured}/>
+              <TagList tags={journal.tags}/>
             </div>
             <h3>{journal.title}</h3>
             <p>{journal.excerpt}</p>

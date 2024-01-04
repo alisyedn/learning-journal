@@ -11,19 +11,18 @@ datasource db {
 }
 
 model Logs {
-  id         Int     @id @default(autoincrement())
-  slug       String  @unique
-  title      String
-  date       String
-  image      String
-  excerpt    String
-  isFeatured Boolean
-  tags       Tags[]
+  id      String @id @default(uuid()) @db.Uuid
+  slug    String @unique
+  title   String
+  date    String
+  image   String
+  excerpt String
+  tags    Tags[]
 }
 
 model Tags {
-  id    Int    @id @default(autoincrement())
+  id    String @id @default(uuid()) @db.Uuid
   label String
   log   Logs   @relation(fields: [logId], references: [id])
-  logId Int
+  logId String @db.Uuid
 }
