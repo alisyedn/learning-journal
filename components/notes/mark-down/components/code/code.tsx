@@ -1,9 +1,9 @@
-import {MarkdownElementArg} from "@/components/notes/mark-down/components/types";
+import {ElementProps} from "@/components/notes/mark-down/components/types";
 import {Prism as SyntaxHighlighter} from "react-syntax-highlighter";
 import {atomDark} from "react-syntax-highlighter/dist/cjs/styles/prism";
 import classes from "./code.module.css";
 
-const Code = ({element}: {element: MarkdownElementArg}) => {
+const Code = ({ element }: ElementProps) => {
   const { className, children } = element
 
   if (className) {

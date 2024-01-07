@@ -1,4 +1,5 @@
-import {PrismaClient} from '@prisma/client'
+import {Logs, PrismaClient} from '@prisma/client'
+import {Notes} from "@/types";
 
 const prisma = new PrismaClient({
   log: [
@@ -28,19 +29,13 @@ prisma.$on('query', (e: any) => {
 })
 
 async function main() {
-  const logs1 = await prisma.logs.findMany({
-    include: {
-      tags: true
-    },
-    where: {
-      tags: {
-        some : {
-          OR: []
-        }
-      }
-    }
-  })
-  console.log(logs1)
+
+  const result = await prisma.$queryRaw<Notes>`SELECT *
+                                        FROM "Logs" l
+                                                 join "Tags" t on l.id = t."logId"
+                                        order by l.id, character_length(t."label")`
+
+  console.log(result)
 }
 
 main()
