@@ -18,11 +18,3 @@
 .image img {
     object-fit: cover;
 }
-
-.tags {
-    z-index: 20;
-    bottom: 0;
-    right: 15%;
-    position: absolute;
-    transform: translateY(-50%);
-}

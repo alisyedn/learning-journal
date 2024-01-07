@@ -32,7 +32,6 @@ const Carousel = ({ className, ms }: CarouselProps) => {
         </Link>
         <ActionNext/>
         <ActionBack/>
-        <TagList tags={tags} className={classes.tags}/>
       </div>
       <Slider/>
     </aside>

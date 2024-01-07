@@ -13,6 +13,7 @@ const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) =>
   return (
     <>
       <header className={classes.header}>
+        <TagList tags={tags}/>
         <h1>{title}</h1>
         <p>{excerpt}</p>
         <div className={classes.image}>
@@ -20,7 +21,6 @@ const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) =>
                  alt={title}
                  fill
           />
-          <TagList tags={tags} className={classes.tags}/>
         </div>
       </header>
       <main className={classes.content}>
