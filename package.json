@@ -6,6 +6,7 @@
     "dev": "next dev",
     "dev:everything": "npm run infa:all && next dev",
     "build": "next build",
+    "build:all": "npm run prisma:generate && npm run prisma:db:push && npm run seed:db && npm run build",
     "start": "next start",
     "lint": "next lint",
     "infa:all": "npm run docker:stop && npm run docker:start && npm run prisma:generate && npm run prisma:db:push && npm run seed:db",
@@ -25,7 +26,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
-    "react-syntax-highlighter": "^15.5.0"
+    "react-syntax-highlighter": "^15.5.0",
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@types/better-sqlite3": "^7.6.8",
