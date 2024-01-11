@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "dev:everything": "npm run infa:all && next dev",
+    "dev:everything": "npm run infa:all && npm run dev",
     "build": "next build",
     "build:all": "npm run prisma:generate && npm run prisma:db:push && npm run seed:db && npm run build",
     "start": "next start",

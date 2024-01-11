@@ -2,7 +2,7 @@
 title: 'Notes about HTML5 and CSS3'
 date: '2024-01-06'
 image: html5-css3.png
-excerpt: NextJS is a react-based production ready full-stack framework.
+excerpt: HTML and CSS are scripting languages used to create a web page and web applications.
 isFeatured: true
 tags: ['html5', 'css3', 'web-development', 'web', 'www']
 ---
