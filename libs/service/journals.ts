@@ -22,6 +22,7 @@ const getJournalContent = async (slug: string) => {
 }
 
 const getFilteredJournals = async (tags: string[]) => {
+  await new Promise(resolve => setTimeout(resolve, 1000))
   return await getJournalByTags(tags)
 }
 

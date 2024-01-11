@@ -1,0 +1,22 @@
+.journals {
+    margin-top: 5rem;
+}
+
+.loading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.error {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #fa5252;
+}
+
+.not-results {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}

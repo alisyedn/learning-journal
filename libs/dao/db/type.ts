@@ -10,7 +10,12 @@ type NoteEntity = Prisma.LogsGetPayload<typeof NoteEntityWithTag>
 
 type NoteEntities = NoteEntity[]
 
-const Tag = Prisma.validator<Prisma.TagsDefaultArgs>()({})
+const Tag = Prisma.validator<Prisma.TagsDefaultArgs>()({
+  select: {
+    id: true,
+    label: true
+  }
+})
 
 type TagEntity = Prisma.TagsGetPayload<typeof Tag>
 

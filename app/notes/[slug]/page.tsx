@@ -3,8 +3,8 @@ import Image from "next/image";
 import {Suspense} from "react";
 import {JournalMarkDown} from "@/components/notes/journal-mark-down";
 import classes from './page.module.css'
-import JournalContentLoading from "@/components/notes/journal-content-loading";
 import TagList from "@/components/ui/tag-list";
+import ContentLoading from "@/components/ui/content-loading";
 
 const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) => {
 
@@ -24,7 +24,7 @@ const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) =>
         </div>
       </header>
       <main className={classes.content}>
-        <Suspense fallback={<JournalContentLoading/>}>
+        <Suspense fallback={<ContentLoading>Fetching Content....</ContentLoading>}>
           <JournalMarkDown slug={slug}/>
         </Suspense>
       </main>

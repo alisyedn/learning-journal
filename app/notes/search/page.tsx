@@ -1,20 +1,24 @@
 import {SearchPageProps} from "@/app/notes/search/types";
-import JournalList from "@/components/notes/journal-list";
-import {getFilteredJournals} from "@/libs/service";
+import classes from './page.module.css'
+import {allTagsJournals, TagEntities} from "@/libs/dao/db";
+import TagSearch from "@/components/search/tag-search";
 
 const SearchPage = async ({ searchParams }: SearchPageProps) => {
 
-  let journals;
-  if (searchParams && searchParams.tags) {
-    journals = await getFilteredJournals(searchParams.tags.split(','))
-  }
+  const allTags: TagEntities = await allTagsJournals()
 
   return (
-    <main>
-      {
-        journals && <JournalList notes={journals}/>
-      }
-    </main>
+    <>
+      <header className={classes.header}>
+        <h1>Search</h1>
+      </header>
+      <main className={classes.main}>
+        <TagSearch
+          initialTags={searchParams?.tags?.split(',') ?? []}
+          tags={allTags.map(tag => tag.label)}
+        />
+      </main>
+    </>
   )
 }
 

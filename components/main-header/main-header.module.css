@@ -1,9 +1,11 @@
 .header {
+    width: 70vw;
+    margin: 2rem auto 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 1rem;
-    margin-top: 2rem;
 }
 
 .title {
@@ -20,7 +22,7 @@
 
 .nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     list-style: none;
     font-size: 1.25rem;
     margin: 0;
@@ -40,4 +42,17 @@
     height: 5rem;
     object-fit: contain;
     filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.5));
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .nav ul {
+        flex-direction: column;
+    }
 }

@@ -2,6 +2,7 @@ import classes from "./img.module.css";
 import Image from "next/image";
 import {ImgProps} from "@/components/notes/mark-down/components/img/types";
 
+//more details: https://amirardalan.com/blog/use-next-image-with-react-markdown
 const Img = ({ element, slug }: ImgProps) => {
 
   const { node } = element

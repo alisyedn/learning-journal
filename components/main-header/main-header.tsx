@@ -1,9 +1,7 @@
 import classes from './main-header.module.css'
 import logo from '@/assets/logo.png'
-import github from '@/assets/github-mark-white.png'
 import Link from "next/link";
 import Image from "next/image";
-import Content from "@/components/ui/content";
 import Svg from "@/components/main-header/components/svg";
 import NavLink from "@/components/main-header/components/nav-link";
 import GithubLink from "@/components/main-header/components/github-link";
@@ -12,7 +10,6 @@ const MainHeader = () => {
   return (
     <>
       <Svg/>
-      <Content>
         <header className={classes.header}>
           <div className={classes.logo}>
             <Link href='/'>
@@ -28,15 +25,17 @@ const MainHeader = () => {
           <nav className={classes.nav}>
             <ul>
               <li>
-                <NavLink pathname='/notes'>Browse Notes</NavLink>
+                <NavLink pathname='/notes'>Browse</NavLink>
               </li>
               <li>
-                <NavLink pathname='/notes/featured'>Featured Notes</NavLink>
+                <NavLink pathname='/notes/featured'>Featured</NavLink>
+              </li>
+              <li>
+                <NavLink pathname='/notes/search'>Search</NavLink>
               </li>
             </ul>
           </nav>
         </header>
-      </Content>
     </>
   )
 }
