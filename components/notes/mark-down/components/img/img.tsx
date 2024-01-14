@@ -9,10 +9,10 @@ const Img = ({ element, slug }: ImgProps) => {
 
   if (node?.children.length) {
     const image: any = node?.children[0]
-    return <WrappedImg slug={slug} image={image} />
+    return <WrappedImg slug={slug} image={image}/>
   }
 
-  return <WrappedImg slug={slug} image={node} />
+  return <WrappedImg slug={slug} image={node}/>
 }
 
 const WrappedImg = ({ slug, image }: { slug: string, image: any }) => {
@@ -24,18 +24,18 @@ const WrappedImg = ({ slug, image }: { slug: string, image: any }) => {
   const fileName = filePath.split('/').pop()
 
   return (
-    <div className={classes.image}>
       <a target="_blank"
          href={`/images/logs/${filePath}`}
          rel="noopener noreferrer"
+         className={classes['image-link']}
       >
-        <Image src={`/images/logs/${filePath}`}
-               alt={alt ?? fileName!}
-               width={800}
-               height={400}
-        />
+        <div className={classes.image}>
+          <Image src={`/images/logs/${filePath}`}
+                 alt={alt ?? fileName!}
+                 fill
+          />
+        </div>
       </a>
-    </div>
   )
 }
 
