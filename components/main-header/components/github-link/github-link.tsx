@@ -1,4 +1,4 @@
-import classes from "./github-link.module.css";
+import classes from "./github-link.module.scss";
 import Image from "next/image";
 import github from "@/assets/github-mark-white.png";
 

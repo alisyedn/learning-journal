@@ -1,7 +1,7 @@
 import {CarouselSliderDotProps} from "@/components/ui/carousel/components/slider-dots/types";
 import useCarouselContext from "@/components/ui/carousel/hooks/use-carousel-context";
 import {useCallback} from "react";
-import classes from "./slider-dots.module.css";
+import classes from "./slider-dots.module.scss";
 
 const SliderDots = ({ index }: CarouselSliderDotProps) => {
 

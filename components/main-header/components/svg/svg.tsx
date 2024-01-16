@@ -1,4 +1,4 @@
-import classes from './svg.module.css'
+import classes from './svg.module.scss'
 
 const Svg = () => (
   <div className={classes["header-background"]}>

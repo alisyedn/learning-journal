@@ -1,5 +1,5 @@
 import {Logs, PrismaClient} from '@prisma/client'
-import {Notes} from "@/types";
+import {Journals} from "@/types";
 
 const prisma = new PrismaClient({
   log: [
@@ -30,7 +30,7 @@ prisma.$on('query', (e: any) => {
 
 async function main() {
 
-  const result = await prisma.$queryRaw<Notes>`SELECT *
+  const result = await prisma.$queryRaw<Journals>`SELECT *
                                         FROM "Logs" l
                                                  join "Tags" t on l.id = t."logId"
                                         order by l.id, character_length(t."label")`

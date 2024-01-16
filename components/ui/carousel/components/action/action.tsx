@@ -1,6 +1,6 @@
 import {PropsWithChildren} from "react";
 import {ActionProps} from "@/components/ui/carousel/components/action/types";
-import classes from './action.module.css'
+import classes from './action.module.scss'
 
 const Action = ({children, className} : PropsWithChildren<ActionProps>) => {
   return (

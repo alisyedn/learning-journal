@@ -1,9 +1,9 @@
 import {getAllJournalsWithAtLeastOneTag as getJournalByTags, getJournal as getJournalBySlug} from "@/libs/dao/db";
 import {getLog as getContentBySlug} from '@/libs/dao/fs'
-import {Note} from "@/types";
+import {Journal} from "@/types";
 import {notFound} from "next/navigation";
 
-const getJournal = async (slug: string): Promise<Note> => {
+const getJournal = async (slug: string): Promise<Journal> => {
   const journal = await getJournalBySlug(slug);
 
   if (!journal) {

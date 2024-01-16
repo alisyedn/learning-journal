@@ -1,10 +1,9 @@
 import db from "@/prisma/db";
-import {NoteEntities, NoteEntity, TagEntities} from "@/libs/dao/db/type";
+import {JournalEntities, JournalEntity, TagEntities} from "@/libs/dao/db/type";
 import {Prisma} from '@prisma/client'
 import {FEATURED} from "@/types";
-import {getFilteredJournals} from "@/libs/service";
 
-const getAllJournals = async (): Promise<NoteEntities> => {
+const getAllJournals = async (): Promise<JournalEntities> => {
   return db.logs.findMany({
     include: {
       tags: true
@@ -12,7 +11,7 @@ const getAllJournals = async (): Promise<NoteEntities> => {
   })
 }
 
-const getAllJournalsWithAtLeastOneTag = async (tags: string[]): Promise<NoteEntities> => {
+const getAllJournalsWithAtLeastOneTag = async (tags: string[]): Promise<JournalEntities> => {
 
   const tagWheres: Prisma.TagsWhereInput[] = tags.map(tag => ({label: tag}))
 
@@ -30,7 +29,7 @@ const getAllJournalsWithAtLeastOneTag = async (tags: string[]): Promise<NoteEnti
   })
 }
 
-const getJournal = async (slug: string) : Promise<NoteEntity | null> => {
+const getJournal = async (slug: string) : Promise<JournalEntity | null> => {
   return db.logs.findUnique({
     include: {
       tags: true
@@ -41,7 +40,7 @@ const getJournal = async (slug: string) : Promise<NoteEntity | null> => {
   })
 }
 
-const getFeaturedJournals = async (): Promise<NoteEntities> => {
+const getFeaturedJournals = async (): Promise<JournalEntities> => {
   return getAllJournalsWithAtLeastOneTag([FEATURED])
 }
 

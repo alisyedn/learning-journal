@@ -1,4 +1,4 @@
-import classes from "./content-loading.module.css";
+import classes from "./content-loading.module.scss";
 import {ContentLoadingProps} from "@/components/ui/content-loading/types";
 
 const ContentLoading = ({ className, children }: ContentLoadingProps) => {

@@ -1,5 +1,5 @@
 import {TagListProps} from "@/components/ui/tag-list/types";
-import classes from './tag-list.module.css'
+import classes from './tag-list.module.scss'
 import Tag from "@/components/ui/tag-list/components/tag";
 
 const TagList = ({ tags, className }: TagListProps) => {

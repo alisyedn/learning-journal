@@ -1,5 +1,5 @@
-import classes from './page.module.css'
-import {AsyncFeaturedJournals as FeaturedJournals} from "@/components/notes/featured-journals";
+import classes from './page.module.scss'
+import {AsyncFeaturedJournals as FeaturedJournals} from "@/components/journals/featured-journals";
 
 
 export default async function Home() {

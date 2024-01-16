@@ -1,11 +1,11 @@
 import {TagProps} from "@/components/ui/tag-list/components/tag/types";
-import classes from './tag.module.css'
+import classes from './tag.module.scss'
 import Link from "next/link";
 
 const Tag = ({label}: TagProps) => {
   return (
     <li>
-      <Link href={`/notes/search?tags=${label}`}
+      <Link href={`/journals/search?tags=${label}`}
             className={classes.tag}
       >
         {label}

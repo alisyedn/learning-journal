@@ -1,7 +1,7 @@
-import {Notes} from "@/types";
+import {Journals} from "@/types";
 
 export interface CarouselWrapperProps {
-  journals: Notes
+  journals: Journals
   className: string
   ms: number
 }

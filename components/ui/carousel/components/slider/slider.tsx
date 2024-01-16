@@ -1,4 +1,4 @@
-import classes from './slider.module.css'
+import classes from './slider.module.scss'
 import useCarouselContext from "@/components/ui/carousel/hooks/use-carousel-context";
 import SliderDots from "@/components/ui/carousel/components/slider-dots";
 

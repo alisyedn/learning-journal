@@ -1,4 +1,4 @@
-import classes from './main-header.module.css'
+import classes from './main-header.module.scss'
 import logo from '@/assets/logo.png'
 import Link from "next/link";
 import Image from "next/image";
@@ -25,13 +25,13 @@ const MainHeader = () => {
           <nav className={classes.nav}>
             <ul>
               <li>
-                <NavLink pathname='/notes'>Browse</NavLink>
+                <NavLink pathname='/journals'>Browse</NavLink>
               </li>
               <li>
-                <NavLink pathname='/notes/featured'>Featured</NavLink>
+                <NavLink pathname='/journals/featured'>Featured</NavLink>
               </li>
               <li>
-                <NavLink pathname='/notes/search'>Search</NavLink>
+                <NavLink pathname='/journals/search'>Search</NavLink>
               </li>
             </ul>
           </nav>

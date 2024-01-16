@@ -1,0 +1,17 @@
+.link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #dddddd;
+
+    &:active,
+    &:hover {
+        color: #ffffff;
+        text-shadow: 0 0 20px rgb(134, 142, 150);
+    }
+}
+
+.active {
+    color: #ffffff;
+    text-shadow: 0 0 20px rgb(134, 142, 150);
+}

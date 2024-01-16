@@ -1,0 +1,28 @@
+.header {
+    width: 70vw;
+    margin: 10rem auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    h1 {
+        font-size: var(--main-heading-font-size);
+        background: var(--main-heading-background);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.main {
+    margin: 5rem auto;
+    width: 70vw;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        margin-top: 1rem;
+    }
+
+    .main {
+        width: 90vw;
+    }
+}

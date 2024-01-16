@@ -1,5 +1,5 @@
 import {tagSearch} from "@/actions";
-import {NoteEntities} from "@/libs/dao/db";
+import {JournalEntities} from "@/libs/dao/db";
 import useProblemDetails from "@/components/search/tag-search/hooks/use-problem-details";
 import {useEffect, useMemo, useState} from "react";
 import {useSearchProps} from "@/components/search/tag-search/hooks/use-search/types";
@@ -8,7 +8,7 @@ import {ProblemDetails} from "@/types";
 const useSearch = ({ selectedTags }: useSearchProps) => {
 
   const { isProblemDetail } = useProblemDetails()
-  const [journals, setJournals] = useState<NoteEntities>([])
+  const [journals, setJournals] = useState<JournalEntities>([])
   const [isFetching, setIsFetching] = useState(false)
   const [problemDetails, setProblemDetails] = useState<ProblemDetails | null>()
 
@@ -28,7 +28,7 @@ const useSearch = ({ selectedTags }: useSearchProps) => {
       if (isProblemDetail(response)) {
         setProblemDetails(response as ProblemDetails)
       } else {
-        setJournals(response as NoteEntities)
+        setJournals(response as JournalEntities)
       }
       setIsFetching(false)
     }, 1000)

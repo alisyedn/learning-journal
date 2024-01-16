@@ -3,8 +3,8 @@
 import {TagSearchProps} from "@/components/search/tag-search/types";
 import Select from "@/components/search/tag-search/components/Select";
 import {useEffect, useState} from "react";
-import JournalList from "@/components/notes/journal-list";
-import classes from './tag-search.module.css'
+import JournalList from "@/components/journals/journal-list";
+import classes from './tag-search.module.scss'
 import useSearch from "@/components/search/tag-search/hooks/use-search";
 import ContentLoading from "@/components/ui/content-loading";
 

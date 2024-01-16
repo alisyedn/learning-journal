@@ -1,7 +1,5 @@
 import Multiselect from "multiselect-react-dropdown";
 import {SelectProps} from "@/components/search/tag-search/components/Select/types";
-import {useCallback, useMemo} from "react";
-import {TagEntities} from "@/libs/dao/db";
 
 const styles = {
   searchBox: {

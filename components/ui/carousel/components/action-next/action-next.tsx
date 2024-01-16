@@ -1,5 +1,5 @@
 import Action from "@/components/ui/carousel/components/action";
-import classes from './action-next.module.css'
+import classes from './action-next.module.scss'
 import useCarouselContext from "@/components/ui/carousel/hooks/use-carousel-context";
 const ActionNext = () => {
 

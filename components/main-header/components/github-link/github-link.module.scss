@@ -1,0 +1,22 @@
+.github-link {
+    color: #ffffff;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    text-transform: none;
+    text-decoration: none;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:active,
+    &:hover {
+        text-shadow: 0 0 20px rgb(134, 142, 150);
+        filter: drop-shadow(0 0 20px rgb(134, 142, 150));
+    }
+}
+

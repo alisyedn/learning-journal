@@ -1,7 +1,7 @@
-import {Notes} from "@/types";
+import {Journals} from "@/types";
 
 interface CarouselContextProps {
-  journals: Readonly<Notes>
+  journals: Readonly<Journals>
   index: number
   next: () => void
   back: () => void
@@ -9,7 +9,7 @@ interface CarouselContextProps {
 }
 
 interface CarouselContextProviderProps {
-  journals: Readonly<Notes>
+  journals: Readonly<Journals>
 }
 
 export type {CarouselContextProps, CarouselContextProviderProps}
