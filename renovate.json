@@ -15,19 +15,6 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "fileRules": [
-    {
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "fileMatch": [
-        "docker-compose.dev.yml"
-      ],
-      "automerge": true
-    }
-  ],
   "packageRules": [
     {
       "updateTypes": [
