@@ -13,16 +13,10 @@
   "ignoreUnstable": true,
   "stabilityDays": 7,
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "schedule": "before 4am on Monday"
   },
   "packageRules": [
-    {
-      "updateTypes": [
-        "minor",
-        "patch"
-      ],
-      "automerge": true
-    },
     {
       "depTypeList": [
         "dependencies"
@@ -34,6 +28,18 @@
         "devDependencies"
       ],
       "groupName": "Dev Dependencies"
+    },
+    {
+      "matchPackagePatterns": [
+        "*"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "groupName": "all non-major dependencies",
+      "groupSlug": "all-minor-patch",
+      "automerge": true
     }
   ]
 }
