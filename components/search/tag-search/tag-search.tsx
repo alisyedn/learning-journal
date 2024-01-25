@@ -5,10 +5,22 @@ import Select from "@/components/search/tag-search/components/Select";
 import {useEffect, useState} from "react";
 import JournalList from "@/components/journals/journal-list";
 import classes from './tag-search.module.scss'
-import useSearch from "@/components/search/tag-search/hooks/use-search";
 import ContentLoading from "@/components/ui/content-loading";
+import {QueryClientProvider} from "@tanstack/react-query";
+import {ReactQueryDevtools} from "@tanstack/react-query-devtools";
+import useSearchV2Action from "@/components/search/tag-search/hooks/use-searchV2-action";
+import {queryClient} from "@/libs/queryClient";
 
-const TagSearch = ({ initialTags, tags }: TagSearchProps) => {
+const TagSearch = (tagSearchProps: TagSearchProps) => {
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Search {...tagSearchProps}/>
+    </QueryClientProvider>
+  )
+}
+
+const Search = ({ initialTags, tags }: TagSearchProps) => {
 
   const [selectedTags, setSelectedTags] = useState<string[]>([])
 
@@ -18,14 +30,14 @@ const TagSearch = ({ initialTags, tags }: TagSearchProps) => {
 
   const {
     journals,
-    isFetching,
-    isError,
     problemDetails,
-    isSuccess
-  } = useSearch({ selectedTags })
+    isFetching,
+    isSuccess,
+    isError
+  } = useSearchV2Action({ selectedTags })
 
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <Select
         selectedOptions={selectedTags}
         options={tags}
@@ -44,10 +56,11 @@ const TagSearch = ({ initialTags, tags }: TagSearchProps) => {
           )
         }
         {
-          !isFetching && isSuccess && <JournalList notes={journals}/>
+          !isFetching && isSuccess && <JournalList notes={journals!}/>
         }
       </div>
-    </>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   )
 }
 

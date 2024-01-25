@@ -5,7 +5,7 @@ const withErrorHandler = <R>(handler: (input: any) => Promise<ProblemDetails | R
     try {
       return await handler(input)
     } catch (error) {
-      console.error(error)
+      console.error('Error occurred', error)
 
       return {
         type: "about:blank",
