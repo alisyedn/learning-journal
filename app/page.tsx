@@ -13,7 +13,7 @@ export default async function Home() {
         </div>
         <div className={classes.description}>
           <p>This is a archive of random sub-set of more comprehensive notes</p>
-          <p>This Project was create during the christmas leave of 2023 during downtime</p>
+          <p>This Demo Project was create during the christmas leave of 2023 during downtime</p>
         </div>
       </header>
       <main className={classes.main}>
