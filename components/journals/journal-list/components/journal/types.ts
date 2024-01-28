@@ -1,5 +1,5 @@
-import {JournalEntity} from "@/libs/dao/db";
+import {Journal} from "@/types/journals";
 
 export interface JournalProps {
-  journal: JournalEntity
+  journal: Journal
 }

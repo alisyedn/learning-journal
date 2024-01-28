@@ -1,0 +1,39 @@
+.item {
+    background: rgba(54, 79, 199, 0.7);
+    background: linear-gradient(rgba(54, 79, 199, 0.7), rgba(54, 79, 199, 1));
+    border-radius: 4px;
+    /* we need this due to object-fit cover! */
+    overflow: hidden;
+    box-shadow: 0 0 12px #000000;
+
+    a {
+        text-decoration-line: none;
+    }
+}
+
+.article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: 'Montserrat', sans-serif;
+    color: #dee2e6;
+
+    h5 {
+        padding: 0.5rem;
+        font-weight: normal;
+        font-size: 0.9rem;
+    }
+
+    img {
+        object-fit: cover;
+    }
+}
+
+.image {
+    height: 10rem;
+    overflow: hidden;
+    position: relative;
+}

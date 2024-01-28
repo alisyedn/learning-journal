@@ -40,9 +40,32 @@
     margin: 5rem auto;
 }
 
+
+.hr {
+
+    display: flex;
+    justify-content: center;
+
+    hr {
+        border-image: linear-gradient(50deg, #ffd43b, #fd7e14) 100;
+        border-width: 5px;
+        border-style: solid;
+
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        width: 100vw;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     .header {
         margin-top: 1rem;
+    }
+
+    .hr {
+        hr {
+            width: 98%;
+        }
     }
 }
 

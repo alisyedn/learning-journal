@@ -1,10 +1,10 @@
 'use server'
 
-import {ProblemDetails} from "@/types";
+import {Journals, ProblemDetails} from "@/types";
 import {withErrorHandler} from "@/actions/libs";
-import {getAllJournalsWithAtLeastOneTag as getFilteredJournals, JournalEntities} from "@/libs/dao/db";
+import {getFilteredJournals} from "@/libs/service";
 
-const tagSearch = withErrorHandler(async (tags: string[]): Promise<ProblemDetails | JournalEntities> => {
+const tagSearch = withErrorHandler(async (tags: string[]): Promise<ProblemDetails | Journals> => {
   return getFilteredJournals(tags)
   }
 )

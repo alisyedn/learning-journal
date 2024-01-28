@@ -1,4 +1,4 @@
-import {getAllJournals} from "@/libs/dao/db/journal";
+import {getAllJournals} from "@/libs/service";
 import JournalList from "@/components/journals/journal-list";
 import {AsyncFeaturedJournals as FeaturedJournals} from "@/components/journals/featured-journals";
 import classes from './page.module.scss'

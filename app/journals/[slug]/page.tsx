@@ -5,6 +5,7 @@ import {JournalMarkDown} from "@/components/journals/journal-mark-down";
 import classes from './page.module.scss'
 import TagList from "@/components/ui/tag-list";
 import ContentLoading from "@/components/ui/content-loading";
+import {RelatedJournalList} from "@/components/journals/related-journal-list";
 
 const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) => {
 
@@ -26,6 +27,10 @@ const NoteDetail = async ({ params: { slug } }: { params: { slug: string } }) =>
       <main className={classes.content}>
         <Suspense fallback={<ContentLoading>Fetching Content....</ContentLoading>}>
           <JournalMarkDown slug={slug}/>
+          <div className={classes.hr}>
+            <hr/>
+          </div>
+          <RelatedJournalList tags={tags} relatedTo={slug}/>
         </Suspense>
       </main>
     </>

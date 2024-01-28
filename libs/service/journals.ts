@@ -1,7 +1,15 @@
-import {getAllJournalsWithAtLeastOneTag as getJournalByTags, getJournal as getJournalBySlug} from "@/libs/dao/db";
+import {
+  getAllJournals as getAllDbJournals,
+  getAllJournalsWithAtLeastOneTag as getJournalByTags,
+  getJournal as getJournalBySlug
+} from "@/libs/dao/db"
 import {getLog as getContentBySlug} from '@/libs/dao/fs'
-import {Journal} from "@/types";
-import {notFound} from "next/navigation";
+import {Journal, Journals} from "@/types"
+import {notFound} from "next/navigation"
+
+const getAllJournals = (): Promise<Journals> => {
+  return getAllDbJournals()
+}
 
 const getJournal = async (slug: string): Promise<Journal> => {
   const journal = await getJournalBySlug(slug);
@@ -22,8 +30,12 @@ const getJournalContent = async (slug: string) => {
 }
 
 const getFilteredJournals = async (tags: string[]) => {
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  return await getJournalByTags(tags)
+  return getJournalByTags(tags)
 }
 
-export {getJournal, getFilteredJournals, getJournalContent}
+const getRelatedJournals = async (relatedTo: string, tags: string[]) => {
+  const journalEntities = await getJournalByTags(tags);
+  return journalEntities.filter(journalEntity => journalEntity.slug != relatedTo)
+}
+
+export {getJournal, getFilteredJournals, getJournalContent, getAllJournals, getRelatedJournals}
