@@ -40,7 +40,7 @@
     "better-sqlite3": "^9.2.2",
     "dotenv": "^16.3.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.32",
+    "eslint-config-next": "14.2.35",
     "gray-matter": "^4.0.3",
     "prisma": "^5.7.1",
     "sass": "^1.69.7",
